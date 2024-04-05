@@ -1,8 +1,10 @@
 from kivy.app import App
 from kivy.lang import Builder
+from kivy.core.window import Window
 
 class SquareNumberApp(App):
     def build(self):
+        Window.size = (300, 200)
         self.title = "Square Number"
         self.root = Builder.load_file('squaring.kv')
         return self.root
@@ -14,5 +16,5 @@ class SquareNumberApp(App):
         except ValueError:
             pass
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     SquareNumberApp().run()
