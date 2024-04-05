@@ -1,0 +1,20 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    Button:
+        text: 'Clear'
+        on_release: app.root.ids.input_name.text = ''
+
+    TextInput:
+        id: input_name
+        text: ''
+        hint_text: "Enter your name"
+
+    Button:
+        text: 'Greet'
+        on_release: app.handle_greet()
+
+    Label:
+        id: output_label
+        text: ''
+        color: 1, 1, 0, 1
