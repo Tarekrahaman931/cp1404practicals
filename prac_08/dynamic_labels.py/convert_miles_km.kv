@@ -1,0 +1,32 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 10
+
+    BoxLayout:
+        size_hint_y: None
+        height: 40
+        spacing: 10
+
+        Button:
+            text: 'Up'
+            on_release: app.handle_increment(1)
+
+        TextInput:
+            id: miles_input
+            hint_text: 'Enter miles'
+            multiline: False
+            input_filter: 'float'
+
+        Button:
+            text: 'Down'
+            on_release: app.handle_increment(-1)
+
+    Label:
+        text: app.output_text
+        color: 1, 1, 0, 1
+        font_size: '20sp'
+
+    # Button:
+    #     text: 'Convert'
+    #     on_release: app.handle_convert()
